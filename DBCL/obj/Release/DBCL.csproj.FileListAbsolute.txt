@@ -1,0 +1,11 @@
+E:\CG_Furniture\DBCL\bin\Release\DBCL.dll.config
+E:\CG_Furniture\DBCL\bin\Release\DBCL.dll
+E:\CG_Furniture\DBCL\bin\Release\DBCL.pdb
+E:\CG_Furniture\DBCL\bin\Release\EntityFramework.dll
+E:\CG_Furniture\DBCL\bin\Release\EntityFramework.SqlServer.dll
+E:\CG_Furniture\DBCL\bin\Release\EntityFramework.xml
+E:\CG_Furniture\DBCL\bin\Release\EntityFramework.SqlServer.xml
+E:\CG_Furniture\DBCL\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\CG_Furniture\DBCL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\CG_Furniture\DBCL\obj\Release\DBCL.dll
+E:\CG_Furniture\DBCL\obj\Release\DBCL.pdb

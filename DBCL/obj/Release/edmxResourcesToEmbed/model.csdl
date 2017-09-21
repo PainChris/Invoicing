@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CG_FurnitureModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Collection_Order">
+    <Key>
+      <PropertyRef Name="Coo_ID" />
+    </Key>
+    <Property Name="Coo_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SaleNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payable_Money" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Realpay_Money" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Purchaser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Coo_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Material_InStorage">
+    <Key>
+      <PropertyRef Name="Mis_ID" />
+    </Key>
+    <Property Name="Mis_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Material_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Storage_Num" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InS_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Material_Order">
+    <Key>
+      <PropertyRef Name="Material_Name" />
+      <PropertyRef Name="Diameter" />
+    </Key>
+    <Property Name="Material_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diameter" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material_OutStorage">
+    <Key>
+      <PropertyRef Name="Mos_ID" />
+    </Key>
+    <Property Name="Mos_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Material_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diameter" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Storage_Num" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OutS_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Order_RecordChart">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone_Num" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Order_Money" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_Date" Type="DateTime" Precision="0" />
+    <Property Name="States" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Payment_Order">
+    <Key>
+      <PropertyRef Name="Pao_ID" />
+    </Key>
+    <Property Name="Pao_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payable_Money" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Realpay_Money" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pao_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Payroll">
+    <Key>
+      <PropertyRef Name="Staff_ID" />
+    </Key>
+    <Property Name="Staff_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Staff_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Payroll1" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Production">
+    <Key>
+      <PropertyRef Name="Pro_ID" />
+    </Key>
+    <Property Name="Pro_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Production_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Material_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diameter" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SaleNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Production_Line" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pro_Num" Type="Int32" Nullable="false" />
+    <Property Name="Start_Time" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="End_Time" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Production_InStorage">
+    <Key>
+      <PropertyRef Name="Pis_ID" />
+    </Key>
+    <Property Name="Pis_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Production_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SaleNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pro_Num" Type="Int32" Nullable="false" />
+    <Property Name="Storage_Num" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InS_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Production_OutStorage">
+    <Key>
+      <PropertyRef Name="Pos_ID" />
+    </Key>
+    <Property Name="Pos_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Production_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SaleNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pro_Num" Type="Int32" Nullable="false" />
+    <Property Name="Storage_Num" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OutS_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Purchaser">
+    <Key>
+      <PropertyRef Name="Purchaser_ID" />
+    </Key>
+    <Property Name="Purchaser_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Purchaser_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pur_Pro_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Addres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sale_Order">
+    <Key>
+      <PropertyRef Name="Sao_ID" />
+    </Key>
+    <Property Name="Sao_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Production_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sao_Num" Type="Int32" Nullable="false" />
+    <Property Name="Pro_Price" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sale_OverView">
+    <Key>
+      <PropertyRef Name="SaleNo" />
+    </Key>
+    <Property Name="SaleNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Purchaser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone_Num" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Sale_Money" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Operater" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Order_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Delivery_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="States" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="Staff_ID" />
+    </Key>
+    <Property Name="Staff_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Staff_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Line" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="ID_num" Type="String" MaxLength="18" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Addres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Supplier_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Supplier_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Addres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Collection_Order" EntityType="Self.Collection_Order" />
+    <EntitySet Name="Material_InStorage" EntityType="Self.Material_InStorage" />
+    <EntitySet Name="Material_Order" EntityType="Self.Material_Order" />
+    <EntitySet Name="Material_OutStorage" EntityType="Self.Material_OutStorage" />
+    <EntitySet Name="Order_RecordChart" EntityType="Self.Order_RecordChart" />
+    <EntitySet Name="Payment_Order" EntityType="Self.Payment_Order" />
+    <EntitySet Name="Payrolls" EntityType="Self.Payroll" />
+    <EntitySet Name="Productions" EntityType="Self.Production" />
+    <EntitySet Name="Production_InStorage" EntityType="Self.Production_InStorage" />
+    <EntitySet Name="Production_OutStorage" EntityType="Self.Production_OutStorage" />
+    <EntitySet Name="Purchasers" EntityType="Self.Purchaser" />
+    <EntitySet Name="Sale_Order" EntityType="Self.Sale_Order" />
+    <EntitySet Name="Sale_OverView" EntityType="Self.Sale_OverView" />
+    <EntitySet Name="Staffs" EntityType="Self.Staff" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+  </EntityContainer>
+</Schema>

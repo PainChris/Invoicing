@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CG_FurnitureModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="Collection_Order">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Collection_Order">
+        <MappingFragment StoreEntitySet="Collection_Order">
+          <ScalarProperty Name="Coo_ID" ColumnName="Coo_ID" />
+          <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+          <ScalarProperty Name="Payable_Money" ColumnName="Payable_Money" />
+          <ScalarProperty Name="Realpay_Money" ColumnName="Realpay_Money" />
+          <ScalarProperty Name="Purchaser" ColumnName="Purchaser" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="Coo_Date" ColumnName="Coo_Date" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material_InStorage">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Material_InStorage">
+        <MappingFragment StoreEntitySet="Material_InStorage">
+          <ScalarProperty Name="Mis_ID" ColumnName="Mis_ID" />
+          <ScalarProperty Name="Material_Name" ColumnName="Material_Name" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Storage_Num" ColumnName="Storage_Num" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="InS_Date" ColumnName="InS_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material_Order">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Material_Order">
+        <MappingFragment StoreEntitySet="Material_Order">
+          <ScalarProperty Name="Material_Name" ColumnName="Material_Name" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material_OutStorage">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Material_OutStorage">
+        <MappingFragment StoreEntitySet="Material_OutStorage">
+          <ScalarProperty Name="Mos_ID" ColumnName="Mos_ID" />
+          <ScalarProperty Name="Material_Name" ColumnName="Material_Name" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Storage_Num" ColumnName="Storage_Num" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="OutS_Date" ColumnName="OutS_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_RecordChart">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Order_RecordChart">
+        <MappingFragment StoreEntitySet="Order_RecordChart">
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Phone_Num" ColumnName="Phone_Num" />
+          <ScalarProperty Name="Order_Money" ColumnName="Order_Money" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="Order_Date" ColumnName="Order_Date" />
+          <ScalarProperty Name="States" ColumnName="States" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment_Order">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Payment_Order">
+        <MappingFragment StoreEntitySet="Payment_Order">
+          <ScalarProperty Name="Pao_ID" ColumnName="Pao_ID" />
+          <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+          <ScalarProperty Name="Payable_Money" ColumnName="Payable_Money" />
+          <ScalarProperty Name="Realpay_Money" ColumnName="Realpay_Money" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="Pao_Date" ColumnName="Pao_Date" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payrolls">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Payroll">
+        <MappingFragment StoreEntitySet="Payroll">
+          <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+          <ScalarProperty Name="Staff_Name" ColumnName="Staff_Name" />
+          <ScalarProperty Name="Payroll1" ColumnName="Payroll" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productions">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Production">
+        <MappingFragment StoreEntitySet="Production">
+          <ScalarProperty Name="Pro_ID" ColumnName="Pro_ID" />
+          <ScalarProperty Name="Production_Name" ColumnName="Production_Name" />
+          <ScalarProperty Name="Material_Name" ColumnName="Material_Name" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+          <ScalarProperty Name="Production_Line" ColumnName="Production_Line" />
+          <ScalarProperty Name="Pro_Num" ColumnName="Pro_Num" />
+          <ScalarProperty Name="Start_Time" ColumnName="Start_Time" />
+          <ScalarProperty Name="End_Time" ColumnName="End_Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Production_InStorage">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Production_InStorage">
+        <MappingFragment StoreEntitySet="Production_InStorage">
+          <ScalarProperty Name="Pis_ID" ColumnName="Pis_ID" />
+          <ScalarProperty Name="Production_Name" ColumnName="Production_Name" />
+          <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+          <ScalarProperty Name="Pro_Num" ColumnName="Pro_Num" />
+          <ScalarProperty Name="Storage_Num" ColumnName="Storage_Num" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="InS_Date" ColumnName="InS_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Production_OutStorage">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Production_OutStorage">
+        <MappingFragment StoreEntitySet="Production_OutStorage">
+          <ScalarProperty Name="Pos_ID" ColumnName="Pos_ID" />
+          <ScalarProperty Name="Production_Name" ColumnName="Production_Name" />
+          <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+          <ScalarProperty Name="Pro_Num" ColumnName="Pro_Num" />
+          <ScalarProperty Name="Storage_Num" ColumnName="Storage_Num" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="OutS_Date" ColumnName="OutS_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Purchasers">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Purchaser">
+        <MappingFragment StoreEntitySet="Purchaser">
+          <ScalarProperty Name="Purchaser_ID" ColumnName="Purchaser_ID" />
+          <ScalarProperty Name="Purchaser_Name" ColumnName="Purchaser_Name" />
+          <ScalarProperty Name="Pur_Pro_Type" ColumnName="Pur_Pro_Type" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale_Order">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Sale_Order">
+        <MappingFragment StoreEntitySet="Sale_Order">
+          <ScalarProperty Name="Sao_ID" ColumnName="Sao_ID" />
+          <ScalarProperty Name="Production_Name" ColumnName="Production_Name" />
+          <ScalarProperty Name="Sao_Num" ColumnName="Sao_Num" />
+          <ScalarProperty Name="Pro_Price" ColumnName="Pro_Price" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale_OverView">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Sale_OverView">
+        <MappingFragment StoreEntitySet="Sale_OverView">
+          <ScalarProperty Name="SaleNo" ColumnName="SaleNo" />
+          <ScalarProperty Name="Purchaser" ColumnName="Purchaser" />
+          <ScalarProperty Name="Phone_Num" ColumnName="Phone_Num" />
+          <ScalarProperty Name="Sale_Money" ColumnName="Sale_Money" />
+          <ScalarProperty Name="Operater" ColumnName="Operater" />
+          <ScalarProperty Name="Order_Date" ColumnName="Order_Date" />
+          <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+          <ScalarProperty Name="States" ColumnName="States" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+          <ScalarProperty Name="Staff_Name" ColumnName="Staff_Name" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Line" ColumnName="Line" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ID_num" ColumnName="ID_num" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="CG_FurnitureModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Supplier_Type" ColumnName="Supplier_Type" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

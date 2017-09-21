@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CG_FurnitureModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Collection_Order">
+    <Key>
+      <PropertyRef Name="Coo_ID" />
+    </Key>
+    <Property Name="Coo_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="SaleNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Payable_Money" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Realpay_Money" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Purchaser" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coo_Date" Type="date" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Material_InStorage">
+    <Key>
+      <PropertyRef Name="Mis_ID" />
+    </Key>
+    <Property Name="Mis_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Material_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Storage_Num" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InS_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material_Order">
+    <Key>
+      <PropertyRef Name="Material_Name" />
+      <PropertyRef Name="Diameter" />
+    </Key>
+    <Property Name="Material_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Diameter" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Order_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material_OutStorage">
+    <Key>
+      <PropertyRef Name="Mos_ID" />
+    </Key>
+    <Property Name="Mos_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Material_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Diameter" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Storage_Num" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutS_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order_RecordChart">
+    <Key>
+      <PropertyRef Name="Order_ID" />
+    </Key>
+    <Property Name="Order_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Supplier" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone_Num" Type="char" MaxLength="11" />
+    <Property Name="Order_Money" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_Date" Type="date" />
+    <Property Name="States" Type="bit" />
+  </EntityType>
+  <EntityType Name="Payment_Order">
+    <Key>
+      <PropertyRef Name="Pao_ID" />
+    </Key>
+    <Property Name="Pao_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Order_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Payable_Money" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Realpay_Money" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Supplier" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pao_Date" Type="date" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Payroll">
+    <Key>
+      <PropertyRef Name="Staff_ID" />
+    </Key>
+    <Property Name="Staff_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Staff_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Payroll" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Production">
+    <Key>
+      <PropertyRef Name="Pro_ID" />
+    </Key>
+    <Property Name="Pro_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Production_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Material_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Diameter" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SaleNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Production_Line" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Pro_Num" Type="int" Nullable="false" />
+    <Property Name="Start_Time" Type="date" Nullable="false" />
+    <Property Name="End_Time" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Production_InStorage">
+    <Key>
+      <PropertyRef Name="Pis_ID" />
+    </Key>
+    <Property Name="Pis_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Production_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SaleNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Pro_Num" Type="int" Nullable="false" />
+    <Property Name="Storage_Num" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="InS_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Production_OutStorage">
+    <Key>
+      <PropertyRef Name="Pos_ID" />
+    </Key>
+    <Property Name="Pos_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Production_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SaleNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Pro_Num" Type="int" Nullable="false" />
+    <Property Name="Storage_Num" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OutS_Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Purchaser">
+    <Key>
+      <PropertyRef Name="Purchaser_ID" />
+    </Key>
+    <Property Name="Purchaser_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Purchaser_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pur_Pro_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="char" MaxLength="11" />
+    <Property Name="Addres" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Sale_Order">
+    <Key>
+      <PropertyRef Name="Sao_ID" />
+    </Key>
+    <Property Name="Sao_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Production_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sao_Num" Type="int" Nullable="false" />
+    <Property Name="Pro_Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Sale_OverView">
+    <Key>
+      <PropertyRef Name="SaleNo" />
+    </Key>
+    <Property Name="SaleNo" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Purchaser" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone_Num" Type="char" MaxLength="11" />
+    <Property Name="Sale_Money" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Operater" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Order_Date" Type="date" Nullable="false" />
+    <Property Name="Delivery_Date" Type="date" Nullable="false" />
+    <Property Name="States" Type="bit" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="Staff_ID" />
+    </Key>
+    <Property Name="Staff_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Staff_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Line" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="char" MaxLength="11" />
+    <Property Name="ID_num" Type="char" MaxLength="18" Nullable="false" />
+    <Property Name="Addres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Supplier_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="char" MaxLength="11" />
+    <Property Name="Addres" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="CG_FurnitureModelStoreContainer">
+    <EntitySet Name="Collection_Order" EntityType="Self.Collection_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material_InStorage" EntityType="Self.Material_InStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material_Order" EntityType="Self.Material_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material_OutStorage" EntityType="Self.Material_OutStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_RecordChart" EntityType="Self.Order_RecordChart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment_Order" EntityType="Self.Payment_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payroll" EntityType="Self.Payroll" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Production" EntityType="Self.Production" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Production_InStorage" EntityType="Self.Production_InStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Production_OutStorage" EntityType="Self.Production_OutStorage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Purchaser" EntityType="Self.Purchaser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale_Order" EntityType="Self.Sale_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale_OverView" EntityType="Self.Sale_OverView" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
